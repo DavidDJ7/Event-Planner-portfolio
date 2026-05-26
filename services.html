@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" href="Logo No-Bg.png">
   <style>
     .services-hero {
-      background: linear-gradient(135deg, #1a1a1a 0%, var(--charcoal) 100%);
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #b8956a 100%);
     }
     @media (max-width: 768px) {
       .services-hero h1 { font-size: 32px; }
@@ -38,7 +38,7 @@
       margin-bottom: 24px;
       transition: var(--transition);
     }
-    .service-card-lg:hover { border-color: var(--dusty-rose); }
+    .service-card-lg:hover { border-color: var(--dusty-rose); box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
     .service-card-lg .img-wrap { height: 360px; }
     .service-card-lg .img-wrap img { width:100%; height:100%; object-fit:cover; }
     .service-card-lg .content { padding: 48px; display: flex; flex-direction: column; justify-content: center; }
@@ -65,7 +65,7 @@
       color: var(--gray-500);
       transition: var(--transition);
     }
-    .all-services-grid span:hover { border-color: var(--dusty-rose); color: var(--charcoal); }
+    .all-services-grid span:hover { border-color: var(--dusty-rose); color: var(--charcoal); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
 
     @media (max-width: 768px) {
       .service-card-lg { grid-template-columns: 1fr !important; }
@@ -149,7 +149,7 @@
     <div style="margin-top:40px;">
       <div class="container">
         <div class="service-card-lg reveal">
-          <div class="img-wrap"><img src="Assets/Decorated wedding stage.jpg" alt="Wedding stage" loading="lazy"></div>
+          <div class="img-wrap"><img src="Assets/Decorated wedding stage.webp" alt="Wedding stage" loading="lazy"></div>
           <div class="content">
             <h3>Weddings & Receptions</h3>
             <p>From intimate ceremonies to grand receptions — we handle every Tamil wedding tradition with cultural precision.</p>
@@ -177,11 +177,11 @@
               <li><i class="fas fa-circle"></i> Catering & guest hospitality</li>
             </ul>
           </div>
-          <div class="img-wrap"><img src="Assets/corporate event setup.jpg" alt="Corporate event" loading="lazy"></div>
+          <div class="img-wrap"><img src="Assets/corporate event setup.webp" alt="Corporate event" loading="lazy"></div>
         </div>
 
         <div class="service-card-lg reveal">
-          <div class="img-wrap"><img src="Assets/Traditional food on banana leaf.jpg" alt="Traditional food" loading="lazy"></div>
+          <div class="img-wrap"><img src="Assets/Traditional food on banana leaf.webp" alt="Traditional food" loading="lazy"></div>
           <div class="content">
             <h3>Catering & Cuisine</h3>
             <p>25+ partner caterers across Tamil Nadu. From traditional sadya to live food stations — every palate covered.</p>
@@ -209,7 +209,7 @@
               <li><i class="fas fa-circle"></i> Specialty acts & performers</li>
             </ul>
           </div>
-          <div class="img-wrap"><img src="Assets/Live performance  dancer.jpg" alt="Live performance" loading="lazy"></div>
+          <div class="img-wrap"><img src="Assets/Live performance  dancer.webp" alt="Live performance" loading="lazy"></div>
         </div>
       </div>
     </div>
@@ -223,15 +223,15 @@
       </div>
       <div class="grid-3" style="margin-top:40px;">
         <div class="card reveal">
-          <div class="img-wrap" style="height:180px;"><img src="Assets/Couple at wedding ceremony.jpg" alt="Wedding couple" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="img-wrap" style="height:180px;"><img src="Assets/Couple at wedding ceremony.webp" alt="Wedding couple" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="card-body"><h3>Wedding Design</h3><p>Bespoke stage setups, bridal entries, ritual coordination — every Tamil tradition handled with cultural precision.</p></div>
         </div>
         <div class="card reveal reveal-delay-1">
-          <div class="img-wrap" style="height:180px;"><img src="Assets/Corporate conference.jpeg" alt="Corporate conference" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="img-wrap" style="height:180px;"><img src="Assets/Corporate conference.webp" alt="Corporate conference" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="card-body"><h3>Corporate Events</h3><p>Conferences, product launches, award ceremonies — professional execution with discretion and style.</p></div>
         </div>
         <div class="card reveal reveal-delay-2">
-          <div class="img-wrap" style="height:180px;"><img src="Assets/Mandapam decoration.jpg" alt="Mandapam decor" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="img-wrap" style="height:180px;"><img src="Assets/Mandapam decoration.webp" alt="Mandapam decor" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="card-body"><h3>Decoration & Design</h3><p>Mandapam, stage, floral, lighting, themed decor — from traditional to contemporary. Starting at ₹1.5L.</p></div>
         </div>
       </div>
@@ -277,11 +277,11 @@
     </div>
   </section>
 
-  <section style="background:var(--charcoal);color:var(--white);padding:80px 0;text-align:center;">
+  <section class="section-premium-gold" style="padding:80px 0;text-align:center;">
     <div class="container reveal">
       <h2 class="section-title" style="color:var(--white);">Not sure what you need?</h2>
       <p style="color:rgba(255,255,255,0.5);margin:16px 0 32px;max-width:480px;margin-left:auto;margin-right:auto;">Tell us about your event and we'll recommend the right approach.</p>
-      <a href="contact.html" class="btn btn-light">Talk to Us</a>
+      <a href="contact.html" class="btn btn-premium">Talk to Us</a>
     </div>
   </section>
 
@@ -344,3 +344,4 @@
   <script src="js/script.js"></script>
 </body>
 </html>
+
