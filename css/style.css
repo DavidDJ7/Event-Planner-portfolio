@@ -861,7 +861,7 @@ ul { list-style: none; }
 .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top:hover { background: var(--gold); color: var(--charcoal); transform: translateY(-2px); }
 
-/* Dark mode — only swap background variables, keep brand/text colors readable */
+/* ===== DARK MODE ===== */
 body.dark-mode {
   --cream: #1A1A1A;
   --gold-light: #2A2620;
@@ -873,6 +873,7 @@ body.dark-mode {
   --gray-400: #A0A0A0;
   --gray-500: #D0CCC6;
   --gray-600: #E0DDD9;
+  --text-light: #E8E0D0;
   --glass-bg: rgba(0,0,0,0.3);
   --glass-border: rgba(255,255,255,0.06);
   --glass-shadow: 0 8px 32px rgba(0,0,0,0.3);
@@ -885,29 +886,89 @@ body.dark-mode .footer { background: #080808; }
 body.dark-mode .back-to-top { background: var(--gold); color: var(--charcoal); }
 body.dark-mode .back-to-top:hover { background: var(--crimson); color: var(--gold); }
 body.dark-mode .theme-toggle i::before { content: '\f185'; }
-body.dark-mode .btn-light { background: var(--gray-100); color: var(--gray-500); border: 1px solid var(--gray-200); }
-body.dark-mode .btn-light:hover { background: var(--gray-200); }
-body.dark-mode .home-hero-actions .btn-outline { color: rgba(255,255,255,0.9) !important; border-color: rgba(255,255,255,0.4) !important; }
-body.dark-mode .home-hero-actions .btn-outline:hover { background: var(--crimson); border-color: var(--crimson) !important; color: var(--white) !important; }
 body.dark-mode .home-hero { background: #0A0A0A; }
 body.dark-mode .about-banner .overlay { background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); }
 
-/* Text on dark-mode backgrounds (cream/gold-light/white become dark → text needs to be light) */
+/* --- Dark mode: always-light text color for --white usages on dark bgs --- */
+body.dark-mode .btn-primary,
+body.dark-mode .btn-premium,
+body.dark-mode .btn-crimson,
+body.dark-mode .btn-wa,
+body.dark-mode .sticky-wa,
+body.dark-mode .mobile-bar a,
+body.dark-mode .footer h5,
+body.dark-mode .footer .footer-bottom span,
+body.dark-mode .section-premium-dark,
+body.dark-mode .section-premium-gold,
+body.dark-mode .page-hero,
+body.dark-mode .page-hero h1,
+body.dark-mode .page-hero p,
+body.dark-mode .home-hero h1,
+body.dark-mode .home-hero p,
+body.dark-mode .home-cta,
+body.dark-mode .home-cta h2,
+body.dark-mode .home-cta p,
+body.dark-mode .error-page h1,
+body.dark-mode .error-page p,
+body.dark-mode .venue-table th,
+body.dark-mode ::selection,
+body.dark-mode .lightbox-close,
+body.dark-mode .header.dark .theme-toggle,
+body.dark-mode .header.dark .header-nav a:hover,
+body.dark-mode .blog-hero h1,
+body.dark-mode .blog-hero .article-meta,
+body.dark-mode .about-banner .overlay h3,
+body.dark-mode .about-banner .overlay p,
+body.dark-mode .timeline-compact.dark li p,
+body.dark-mode .author-bio .avatar { color: var(--text-light); }
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-premium:hover,
+body.dark-mode .btn-crimson:hover,
+body.dark-mode .footer-social a:hover,
+body.dark-mode .share-bar a:hover,
+body.dark-mode .btn-outline:hover { background: var(--crimson); color: var(--text-light); border-color: var(--crimson); }
+body.dark-mode .btn-wa:hover { background: #128C7E; color: var(--text-light); }
+body.dark-mode .home-hero-actions .btn-outline { color: var(--text-light) !important; border-color: rgba(255,255,255,0.3) !important; }
+body.dark-mode .home-hero-actions .btn-outline:hover { background: var(--crimson); border-color: var(--crimson) !important; color: var(--text-light) !important; }
+
+/* --- Dark mode: btn-light with readable contrast --- */
+body.dark-mode .btn-light { background: var(--gray-200); color: var(--text-light); border: 1px solid var(--gray-300); }
+body.dark-mode .btn-light:hover { background: var(--gray-300); }
+
+/* --- Dark mode: text on dark-mode-darkened backgrounds --- */
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5,
 body.dark-mode p, body.dark-mode li, body.dark-mode blockquote,
 body.dark-mode .label, body.dark-mode .section-title,
-body.dark-mode .section-subtitle { color: var(--gray-500); }
+body.dark-mode .section-subtitle,
+body.dark-mode .contact-info h3,
+body.dark-mode .contact-details .detail strong,
+body.dark-mode .timeline-compact li strong,
+body.dark-mode .all-services-grid span:hover,
+body.dark-mode .venue-table .budget,
+body.dark-mode .display-heading,
+body.dark-mode .stat h3 { color: var(--gray-500); }
 body.dark-mode .card-body p,
 body.dark-mode .service-card-lg .content p,
 body.dark-mode .service-card-lg .content li,
 body.dark-mode .blog-post .content p,
 body.dark-mode .contact-info p,
 body.dark-mode .office-card p,
-body.dark-mode .footer p { color: var(--gray-400) !important; }
+body.dark-mode .article-body p,
+body.dark-mode .article-body li,
+body.dark-mode .footer p,
+body.dark-mode .footer li,
+body.dark-mode .footer a { color: var(--gray-400) !important; }
 body.dark-mode h1 em, body.dark-mode h2 em, body.dark-mode h3 em { color: var(--gold); }
-body.dark-mode .office-card h4 { color: var(--gray-500) !important; }
 
-/* Sections with bg=gold-light/cream/white in dark mode */
+/* --- Dark mode: form inputs on dark backgrounds --- */
+body.dark-mode .contact-form-card input,
+body.dark-mode .contact-form-card select,
+body.dark-mode .contact-form-card textarea { background: var(--white); color: var(--gray-500); border-color: var(--gray-200); }
+body.dark-mode .contact-form-card input:focus,
+body.dark-mode .contact-form-card select:focus,
+body.dark-mode .contact-form-card textarea:focus { background: #1A1A1A; border-color: var(--gold); }
+
+/* --- Dark mode: background overrides for sections/cards --- */
 body.dark-mode .section,
 body.dark-mode .testimonial-card-home,
 body.dark-mode .blog-post,
@@ -922,25 +983,28 @@ body.dark-mode .values-list li,
 body.dark-mode .office-card,
 body.dark-mode .team-card,
 body.dark-mode .share-bar a { background: var(--cream) !important; border-color: var(--gray-200) !important; }
+body.dark-mode .values-list li[style*="background:rgba(255,255,255"] { background: var(--cream) !important; }
 
-/* Remove !important from label color in dark - let it inherit */
-body.dark-mode div.label { color: var(--gold) !important; }
-
-/* Blog post content areas */
-body.dark-mode .article-body p,
-body.dark-mode .article-body li { color: var(--gray-400); }
-body.dark-mode .article-body h2,
-body.dark-mode .article-body h3 { color: var(--gray-500); }
-
-/* Specific hardcoded inline style overrides for dark mode */
-body.dark-mode [style*="background:var(--gold-light)"] { background: var(--cream) !important; }
-body.dark-mode [style*="background:var(--cream)"] { background: var(--white) !important; }
+/* --- Dark mode: inline style catch-all overrides --- */
+body.dark-mode [style*="color:var(--white)"] { color: var(--text-light) !important; }
+body.dark-mode [style*="color: var(--white)"] { color: var(--text-light) !important; }
+body.dark-mode [style*="color:rgba(255,255,255"] { color: var(--gray-400) !important; }
 body.dark-mode [style*="color:var(--charcoal)"] { color: var(--gray-500) !important; }
+body.dark-mode [style*="color: var(--charcoal)"] { color: var(--gray-500) !important; }
 body.dark-mode [style*="color:var(--gray-500)"] { color: var(--gray-400) !important; }
 body.dark-mode [style*="color:var(--gray-400)"] { color: var(--gray-300) !important; }
+body.dark-mode [style*="background:var(--gold-light)"] { background: var(--cream) !important; }
+body.dark-mode [style*="background:var(--cream)"] { background: var(--white) !important; }
+body.dark-mode [style*="background:var(--white)"] { background: var(--cream) !important; }
 body.dark-mode [style*="background:var(--charcoal)"] { background: #0A0A0A !important; }
 body.dark-mode [style*="--charcoal);"] { background: #0A0A0A !important; }
-body.dark-mode [style*="color:rgba(255,255,255"] { color: var(--gray-400) !important; }
+
+/* --- Dark mode: blog-specific --- */
+body.dark-mode .article-body h2,
+body.dark-mode .article-body h3 { color: var(--gray-500); }
+body.dark-mode div.label { color: var(--gold) !important; }
+body.dark-mode .article-meta { color: var(--gray-400) !important; }
+body.dark-mode .venue-table tr:hover td { background: var(--cream) !important; }
 
 /* Theme toggle */
 .theme-toggle {
