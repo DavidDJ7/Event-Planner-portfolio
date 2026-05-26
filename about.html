@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="Logo No-Bg.png">
+  <meta property="og:title" content="About — Thamizh Nikazhvigal">
+  <meta property="og:description" content="Founded in 2014. 850+ events. 4 offices across Tamil Nadu. We design events that let families enjoy their own celebrations.">
+  <meta property="og:url" content="https://thamizhnikazhvigal.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://thamizhnikazhvigal.com/Logo%20No-Bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://thamizhnikazhvigal.com/about.html">
   <style>
     .about-hero {
       background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #9B1B30 100%);
@@ -105,7 +112,7 @@
       display: flex;
       align-items: center;
       gap: 24px;
-      background: var(--warm-beige);
+      background: var(--gold-light);
       padding: 32px 40px;
       border: 1px solid var(--gray-200);
     }
@@ -140,10 +147,12 @@
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="header-actions">
         <a href="contact.html" class="btn btn-primary btn-sm">Plan Your Event</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
         <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -156,6 +165,7 @@
       <a href="about.html" class="nav-item"><i class="fas fa-users"></i> About</a>
       <a href="services.html" class="nav-item"><i class="fas fa-concierge-bell"></i> Services</a>
       <a href="gallery.html" class="nav-item"><i class="fas fa-images"></i> Gallery</a>
+      <a href="blog.html" class="nav-item"><i class="fas fa-pen"></i> Blog</a>
       <a href="contact.html" class="nav-item"><i class="fas fa-envelope"></i> Contact</a>
     </div>
     <div class="mobile-actions">
@@ -163,6 +173,8 @@
       <a href="contact.html" class="btn btn-crimson"><i class="fas fa-pen"></i> Get in Touch</a>
     </div>
   </nav>
+
+  <div class="container"><div class="breadcrumbs"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>About</span></div></div>
 
   <section class="page-hero about-hero">
     <div class="container">
@@ -260,15 +272,6 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;background:var(--charcoal);">
-    <div class="container">
-      <div class="grid-2" style="align-items:start;">
-        <div class="img-wrap reveal" style="height:400px;"><img src="Assets/Family at wedding.webp" alt="Family at wedding" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="img-wrap reveal reveal-delay-1" style="height:400px;"><img src="Assets/Bride with parents.webp" alt="Bride with parents" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-      </div>
-    </div>
-  </section>
-
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="text-center reveal">
@@ -311,48 +314,12 @@
         <div class="team-card reveal reveal-delay-3">
           <div class="img-wrap"><img src="https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg" alt="Client relations" loading="lazy"></div>
           <h4 style="color:var(--white);">Divya P.</h4>
-          <p style="color:rgba(255,255,255,0.5);">Senior Event Parent · 6+ yrs</p>
+          <p style="color:rgba(255,255,255,0.5);">Senior Event Planner · 6+ yrs</p>
         </div>
         <div class="team-card reveal reveal-delay-3">
           <div class="img-wrap"><img src="https://images.pexels.com/photos/3184301/pexels-photo-3184301.jpeg" alt="Vendors" loading="lazy"></div>
           <h4 style="color:var(--white);">Venkatesh M.</h4>
           <p style="color:rgba(255,255,255,0.5);">Vendor Relations · 9+ yrs</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="label">Leadership</div>
-        <h2 class="section-title">The people behind the work</h2>
-      </div>
-      <div class="team-grid" style="margin-top:40px;">
-        <div class="team-card reveal">
-          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184297/pexels-photo-3184297.webp" alt="Founder" loading="lazy"></div>
-          <h4>Karthikeyan S.</h4>
-          <p>Founder & CEO · 10+ yrs</p>
-        </div>
-        <div class="team-card reveal reveal-delay-1">
-          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.webp" alt="Operations" loading="lazy"></div>
-          <h4>Meenakshi R.</h4>
-          <p>Head of Operations · 8+ yrs</p>
-        </div>
-        <div class="team-card reveal reveal-delay-2">
-          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184299/pexels-photo-3184299.webp" alt="Creative" loading="lazy"></div>
-          <h4>Bharath K.</h4>
-          <p>Creative Director · 7+ yrs</p>
-        </div>
-        <div class="team-card reveal reveal-delay-3">
-          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184300/pexels-photo-3184300.webp" alt="Client relations" loading="lazy"></div>
-          <h4>Divya P.</h4>
-          <p>Senior Event Parent · 6+ yrs</p>
-        </div>
-        <div class="team-card reveal reveal-delay-3">
-          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184301/pexels-photo-3184301.webp" alt="Vendors" loading="lazy"></div>
-          <h4>Venkatesh M.</h4>
-          <p>Vendor Relations · 9+ yrs</p>
         </div>
       </div>
     </div>
@@ -386,6 +353,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -422,6 +390,7 @@
     <a href="contact.html" class="quote"><i class="fas fa-pen"></i> Inquiry</a>
   </div>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script src="js/script.js"></script>
 </body>
 </html>

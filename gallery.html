@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="Logo No-Bg.png">
+  <meta property="og:title" content="Gallery — Thamizh Nikazhvigal">
+  <meta property="og:description" content="Portfolio of 850+ events across Tamil Nadu. Weddings, corporate events, celebrations — real moments from real families.">
+  <meta property="og:url" content="https://thamizhnikazhvigal.com/gallery.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://thamizhnikazhvigal.com/Logo%20No-Bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://thamizhnikazhvigal.com/gallery.html">
   <style>
     .gallery-hero {
       background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #9B1B30 80%, #0d0d0d 100%);
@@ -86,10 +93,12 @@
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="header-actions">
         <a href="contact.html" class="btn btn-primary btn-sm">Plan Your Event</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
         <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -102,6 +111,7 @@
       <a href="about.html" class="nav-item"><i class="fas fa-users"></i> About</a>
       <a href="services.html" class="nav-item"><i class="fas fa-concierge-bell"></i> Services</a>
       <a href="gallery.html" class="nav-item"><i class="fas fa-images"></i> Gallery</a>
+      <a href="blog.html" class="nav-item"><i class="fas fa-pen"></i> Blog</a>
       <a href="contact.html" class="nav-item"><i class="fas fa-envelope"></i> Contact</a>
     </div>
     <div class="mobile-actions">
@@ -109,6 +119,8 @@
       <a href="contact.html" class="btn btn-crimson"><i class="fas fa-pen"></i> Get in Touch</a>
     </div>
   </nav>
+
+  <div class="container"><div class="breadcrumbs"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Gallery</span></div></div>
 
   <section class="page-hero gallery-hero">
     <div class="container">
@@ -127,39 +139,51 @@
         <h2 class="section-title">Selected events</h2>
       </div>
     </div>
+    <div class="text-center reveal" style="margin-top:24px;">
+      <button class="btn btn-sm gallery-filter active" data-filter="all" style="background:var(--crimson);color:var(--gold);border:none;margin:0 4px 8px;">All</button>
+      <button class="btn btn-sm gallery-filter" data-filter="wedding" style="background:var(--cream);color:var(--charcoal);border:1px solid var(--gray-200);margin:0 4px 8px;">Weddings</button>
+      <button class="btn btn-sm gallery-filter" data-filter="decor" style="background:var(--cream);color:var(--charcoal);border:1px solid var(--gray-200);margin:0 4px 8px;">Decor</button>
+      <button class="btn btn-sm gallery-filter" data-filter="celebration" style="background:var(--cream);color:var(--charcoal);border:1px solid var(--gray-200);margin:0 4px 8px;">Celebrations</button>
+      <button class="btn btn-sm gallery-filter" data-filter="behind" style="background:var(--cream);color:var(--charcoal);border:1px solid var(--gray-200);margin:0 4px 8px;">Behind the Scenes</button>
+    </div>
     <div style="margin-top:40px;padding:0 16px;">
       <div class="gallery-masonry">
-        <div class="item reveal">
-          <img src="Assets/tamil wedding ceremony.webp" alt="Wedding ceremony" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+        <div class="item reveal gallery-item" data-category="wedding">
+          <img src="Assets/tamil wedding ceremony.webp" alt="Wedding ceremony" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;cursor:pointer;">
           <div class="caption">Traditional Tamil Wedding — Chennai</div>
         </div>
-        <div class="item reveal reveal-delay-1">
-          <img src="Assets/Flower decoration.webp" alt="Flower decoration" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;">
+        <div class="item reveal reveal-delay-1 gallery-item" data-category="decor">
+          <img src="Assets/Flower decoration.webp" alt="Flower decoration" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;cursor:pointer;">
           <div class="caption">Mandapam Decoration — Coimbatore</div>
         </div>
-        <div class="item reveal reveal-delay-2">
-          <img src="Assets/Groom on horse entry.webp" alt="Groom entry" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;">
+        <div class="item reveal reveal-delay-2 gallery-item" data-category="wedding">
+          <img src="Assets/Groom on horse entry.webp" alt="Groom entry" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;cursor:pointer;">
           <div class="caption">Groom Entry — Madurai</div>
         </div>
-        <div class="item reveal reveal-delay-1">
-          <img src="Assets/Wedding photographer at work.webp" alt="Photographer at work" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;">
+        <div class="item reveal reveal-delay-1 gallery-item" data-category="behind">
+          <img src="Assets/Wedding photographer at work.webp" alt="Photographer at work" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;cursor:pointer;">
           <div class="caption">Behind the Scenes — Trichy</div>
         </div>
-        <div class="item reveal">
-          <img src="Assets/Live concert performance.webp" alt="Live concert" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;">
+        <div class="item reveal gallery-item" data-category="celebration">
+          <img src="Assets/Live concert performance.webp" alt="Live concert" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;cursor:pointer;">
           <div class="caption">Live Concert — Chennai</div>
         </div>
-        <div class="item reveal reveal-delay-2">
-          <img src="Assets/Flower arrangements.webp" alt="Flower arrangements" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+        <div class="item reveal reveal-delay-2 gallery-item" data-category="decor">
+          <img src="Assets/Flower arrangements.webp" alt="Flower arrangements" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;cursor:pointer;">
           <div class="caption">Floral Design — Coimbatore</div>
         </div>
-        <div class="item reveal">
-          <img src="Assets/Traditional sadya meal.webp" alt="Traditional sadya" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+        <div class="item reveal gallery-item" data-category="celebration">
+          <img src="Assets/Traditional sadya meal.webp" alt="Traditional sadya" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;cursor:pointer;">
           <div class="caption">Traditional Sadya — Trichy</div>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="">
+  </div>
 
   <section class="section video-section">
     <div class="container">
@@ -216,6 +240,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -252,6 +277,7 @@
     <a href="contact.html" class="quote"><i class="fas fa-pen"></i> Inquiry</a>
   </div>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script src="js/script.js"></script>
 </body>
 </html>
