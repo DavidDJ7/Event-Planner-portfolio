@@ -885,6 +885,10 @@ body.dark-mode .footer { background: #080808; }
 body.dark-mode .back-to-top { background: var(--gold); color: var(--charcoal); }
 body.dark-mode .back-to-top:hover { background: var(--crimson); color: var(--gold); }
 body.dark-mode .theme-toggle i::before { content: '\f185'; }
+body.dark-mode .btn-light { background: var(--gray-100); color: var(--gray-500); border: 1px solid var(--gray-200); }
+body.dark-mode .btn-light:hover { background: var(--gray-200); }
+body.dark-mode .home-hero-actions .btn-outline { color: rgba(255,255,255,0.9) !important; border-color: rgba(255,255,255,0.4) !important; }
+body.dark-mode .home-hero-actions .btn-outline:hover { background: var(--crimson); border-color: var(--crimson) !important; color: var(--white) !important; }
 body.dark-mode .home-hero { background: #0A0A0A; }
 body.dark-mode .about-banner .overlay { background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); }
 
