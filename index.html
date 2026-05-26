@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thamizh Nikazhvigal — Tamil Nadu's Event Architects</title>
+  <meta name="description" content="Premium event design and management in Tamil Nadu. Weddings, corporate, celebrations — crafted with precision and cultural depth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="Logo No-Bg.png">
+  <style>
+    .home-hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+    .home-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .home-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.2) 50%, rgba(13,13,13,0.5) 100%);
+    }
+    .home-hero .container { position: relative; z-index: 2; width: 100%; }
+    .home-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 8vw, 88px);
+      color: var(--white);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      max-width: 900px;
+    }
+    .home-hero h1 em { font-style: italic; color: var(--dusty-rose); }
+    .home-hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      margin-top: 24px;
+      line-height: 1.8;
+    }
+    .home-hero-actions { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-scroll .line {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .intro-grid .img-wrap { height: 600px; }
+    .intro-grid .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+    }
+    .featured-grid .img-wrap { height: 420px; }
+    .featured-grid .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-grid .col { display: flex; flex-direction: column; gap: 24px; }
+    .featured-grid .col .img-wrap { height: 198px; }
+
+    .testimonial-card-home {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+      background: var(--white);
+      padding: 60px;
+      border: 1px solid var(--gray-200);
+    }
+    .testimonial-card-home .img-wrap { height: 400px; border-radius: 4px; overflow: hidden; }
+    .testimonial-card-home .img-wrap img { width:100%; height:100%; object-fit:cover; }
+    .testimonial-card-home .quote-mark {
+      font-family: var(--font-display);
+      font-size: 64px;
+      line-height: 0.4;
+      color: var(--dusty-rose);
+      opacity: 0.3;
+    }
+    .testimonial-card-home blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.5vw, 28px);
+      color: var(--charcoal);
+      line-height: 1.5;
+      font-weight: 400;
+      margin: 20px 0;
+    }
+    .testimonial-card-home .attribution { font-size: 14px; color: var(--gray-400); }
+    .testimonial-card-home .attribution strong { color: var(--charcoal); }
+
+    .blog-grid-home {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .blog-grid-home .card .img-wrap { height: 200px; }
+    .blog-grid-home .card .img-wrap img { width:100%; height:100%; object-fit:cover; }
+
+    .home-cta {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 120px 0;
+      text-align: center;
+    }
+    .home-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+    .home-cta p { color: rgba(255,255,255,0.5); max-width: 480px; margin: 16px auto 32px; }
+
+    @media (max-width: 768px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+      .intro-grid .img-wrap { height: 300px; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .featured-grid .img-wrap { height: 280px; }
+      .featured-grid .col .img-wrap { height: 200px; }
+      .testimonial-card-home { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
+      .testimonial-card-home .img-wrap { height: 240px; }
+      .blog-grid-home { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo"><img src="Logo with name.png" alt="Thamizh Nikazhvigal"></a>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Plan Your Event</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-actions">
+      <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="btn btn-wa" style="justify-content:center;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="contact.html" class="btn btn-light" style="justify-content:center;">Get in Touch</a>
+    </div>
+  </nav>
+
+  <section class="home-hero">
+    <video class="home-hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="Assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="home-hero-overlay"></div>
+    <div class="container">
+      <h1 class="reveal">We design events that <em>stay</em> with people.</h1>
+      <p class="reveal reveal-delay-1">Tamil Nadu's event architects. 850+ celebrations, one philosophy — you enjoy, we craft every detail.</p>
+      <div class="home-hero-actions reveal reveal-delay-2">
+        <a href="gallery.html" class="btn btn-light">View Our Work</a>
+        <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:var(--white);">Start Planning</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>Scroll</span><div class="line"></div></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="img-wrap reveal">
+          <img src="Assets/wedding hall.jpg" alt="Event space" loading="lazy">
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="label">Since 2014</div>
+          <h2 class="section-title">We believe the best events feel effortless.</h2>
+          <p style="color:var(--gray-400);font-size:16px;line-height:1.9;margin:20px 0;">
+            Behind every flawless celebration is thousands of hours of unseen work. We operate quietly, plan meticulously, and execute with precision — so you and your family can simply be present.
+          </p>
+          <a href="about.html" class="btn btn-primary">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;background:var(--warm-beige);background-image:url('Assets/Warm gold temple background texture.jpg');background-size:cover;background-blend-mode:overlay;background-position:center;">
+    <div class="container reveal">
+      <div class="label text-center">By the numbers</div>
+      <div class="stat-row" style="margin-top:24px;">
+        <div class="stat"><h3 data-count="850"><span class="suffix">+</span></h3><p>Events</p></div>
+        <div class="stat"><h3 data-count="10"><span class="suffix">+</span></h3><p>Years</p></div>
+        <div class="stat"><h3 data-count="60"><span class="suffix">+</span></h3><p>Team</p></div>
+        <div class="stat"><h3 data-count="4.8">★</h3><p>Rating</p></div>
+        <div class="stat"><h3 data-count="4"></h3><p>Offices</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="featured-grid">
+        <div class="img-wrap reveal">
+          <img src="Assets/Bride and groom smiling.webp" alt="Wedding moment" loading="lazy">
+        </div>
+        <div class="col">
+          <div class="img-wrap reveal reveal-delay-1">
+            <img src="Assets/indian wedding.jpg" alt="Ceremony" loading="lazy">
+          </div>
+          <div class="img-wrap reveal reveal-delay-2">
+            <img src="Assets/Couple laughing.jpg" alt="Happy moments" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="testimonial-card-home reveal">
+        <div class="img-wrap"><img src="Assets/Happy couple.jpg" alt="Happy couple" loading="lazy"></div>
+        <div>
+          <div class="quote-mark">"</div>
+          <blockquote>We were nervous about our daughter's wedding. Thamizh Nikazhvigal didn't just plan it — they let us live it. We actually enjoyed the wedding instead of running around.</blockquote>
+          <div class="attribution">— <strong>Ramesh & Lakshmi Iyer</strong>, Chennai</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--cream);">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label">From our blog</div>
+        <h2 class="section-title">Planning guides & inspiration</h2>
+      </div>
+      <div class="blog-grid-home" style="margin-top:32px;">
+        <div class="card reveal">
+          <div class="img-wrap"><img src="Assets/Wedding planning guide.webp" alt="Wedding planning" loading="lazy"></div>
+          <div class="card-body"><h3>How to plan a Tamil wedding in 6 months</h3><p>Your month-by-month checklist — from Muhurtham to the big day.</p></div>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <div class="img-wrap"><img src="Assets/Tamil tradition guide.jpg" alt="Tamil traditions" loading="lazy"></div>
+          <div class="card-body"><h3>Understanding Tamil wedding traditions</h3><p>Iyer vs Iyengar — a guide to ceremonies and customs.</p></div>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="img-wrap"><img src="Assets/Venue selection guide.jpg" alt="Venue guide" loading="lazy"></div>
+          <div class="card-body"><h3>Top 20 venues across Tamil Nadu</h3><p>From intimate mandapams to 5-star hotels — curated for you.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-cta">
+    <div class="container reveal">
+      <h2>Ready to create something unforgettable?</h2>
+      <p>Tell us about your event and we'll take it from there.</p>
+      <a href="contact.html" class="btn btn-light">Start the Conversation</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo No-Bg.png" alt="Thamizh Nikazhvigal">
+          <p><strong>Thamizh Nikazhvigal</strong> — Event architects in Tamil Nadu. We design celebrations that stay with people.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Pages</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html">Weddings</a></li>
+            <li><a href="services.html">Corporate</a></li>
+            <li><a href="services.html">Celebrations</a></li>
+            <li><a href="services.html">Design & Decor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+919XXXXXXXXX">+91 9X XXXX XXXX</a></li>
+            <li><a href="https://wa.me/919XXXXXXXXX">WhatsApp</a></li>
+            <li><a href="mailto:hello@thamizhnikazhvigal.com">Email</a></li>
+            <li>Chennai · Coimbatore · Madurai · Trichy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Thamizh Nikazhvigal</span>
+        <span>Chennai · Coimbatore · Madurai · Trichy</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="sticky-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <div class="mobile-bar">
+    <a href="tel:+919XXXXXXXXX" class="call"><i class="fas fa-phone"></i> Call</a>
+    <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="contact.html" class="quote"><i class="fas fa-pen"></i> Inquiry</a>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

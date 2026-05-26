@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Thamizh Nikazhvigal</title>
+  <meta name="description" content="Portfolio of 850+ events across Tamil Nadu. Weddings, corporate events, celebrations — real moments from real families.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="Logo No-Bg.png">
+  <style>
+    .gallery-hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    }
+    .gallery-masonry {
+      columns: 3;
+      column-gap: 16px;
+    }
+    .gallery-masonry .item {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-masonry .item img {
+      width: 100%;
+      display: block;
+      transition: transform 1s ease;
+    }
+    .gallery-masonry .item:hover img { transform: scale(1.04); }
+    .gallery-masonry .item .caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: var(--white);
+      font-size: 13px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .gallery-masonry .item:hover .caption { opacity: 1; }
+    .gallery-masonry .item:nth-child(1) { height: auto; }
+    .gallery-masonry .item:nth-child(2) img { aspect-ratio: 4/5; object-fit: cover; }
+    .gallery-masonry .item:nth-child(3) img { aspect-ratio: 1/1; object-fit: cover; }
+    .gallery-masonry .item:nth-child(4) img { aspect-ratio: 3/4; object-fit: cover; }
+    .gallery-masonry .item:nth-child(5) img { aspect-ratio: 16/10; object-fit: cover; }
+    .gallery-masonry .item:nth-child(6) img { aspect-ratio: 4/3; object-fit: cover; }
+
+    .video-section {
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
+    @media (max-width: 1024px) { .gallery-masonry { columns: 2; } }
+    @media (max-width: 600px) { .gallery-masonry { columns: 1; } }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo"><img src="Logo with name.png" alt="Thamizh Nikazhvigal"></a>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Plan Your Event</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-actions">
+      <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="btn btn-wa" style="justify-content:center;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="contact.html" class="btn btn-light" style="justify-content:center;">Get in Touch</a>
+    </div>
+  </nav>
+
+  <section class="page-hero gallery-hero">
+    <div class="container">
+      <div class="reveal">
+        <div class="label" style="color:var(--dusty-rose);">Portfolio</div>
+        <h1>Real moments from real celebrations.</h1>
+        <p>Every image is from an event we designed and executed. No stock photography — just real families, real emotions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label">Featured work</div>
+        <h2 class="section-title">Selected events</h2>
+      </div>
+    </div>
+    <div style="margin-top:40px;padding:0 16px;">
+      <div class="gallery-masonry">
+        <div class="item reveal">
+          <img src="Assets/tamil wedding ceremony.jpg" alt="Wedding ceremony" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+          <div class="caption">Traditional Tamil Wedding — Chennai</div>
+        </div>
+        <div class="item reveal reveal-delay-1">
+          <img src="Assets/Flower decoration.jpg" alt="Flower decoration" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;">
+          <div class="caption">Mandapam Decoration — Coimbatore</div>
+        </div>
+        <div class="item reveal reveal-delay-2">
+          <img src="Assets/Groom on horse entry.jpeg" alt="Groom entry" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;">
+          <div class="caption">Groom Entry — Madurai</div>
+        </div>
+        <div class="item reveal reveal-delay-1">
+          <img src="Assets/Wedding photographer at work.jpg" alt="Photographer at work" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;">
+          <div class="caption">Behind the Scenes — Trichy</div>
+        </div>
+        <div class="item reveal">
+          <img src="Assets/Live concert performance.jpg" alt="Live concert" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;">
+          <div class="caption">Live Concert — Chennai</div>
+        </div>
+        <div class="item reveal reveal-delay-2">
+          <img src="Assets/Flower arrangements.jpg" alt="Flower arrangements" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+          <div class="caption">Floral Design — Coimbatore</div>
+        </div>
+        <div class="item reveal">
+          <img src="Assets/Traditional sadya meal.jpg" alt="Traditional sadya" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+          <div class="caption">Traditional Sadya — Trichy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section video-section">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:40px;">
+        <div class="label" style="color:var(--dusty-rose);">Event film</div>
+        <h2 class="section-title" style="color:var(--white);">Watch the experience</h2>
+        <p style="color:rgba(255,255,255,0.5);max-width:480px;margin:12px auto 0;">A glimpse into the celebrations we craft — shot at actual events across Tamil Nadu.</p>
+      </div>
+    </div>
+    <div class="video-wrapper reveal" style="padding:0 16px;">
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;">
+        <iframe src="https://www.youtube.com/embed/-6DuKPMMd-U" title="Event Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="stat-row reveal">
+        <div class="stat"><h3 data-count="850"><span class="suffix">+</span></h3><p>Events delivered</p></div>
+        <div class="stat"><h3 data-count="100"><span class="suffix">+</span></h3><p>Venues</p></div>
+        <div class="stat"><h3 data-count="50"><span class="suffix">+</span></h3><p>Vendors</p></div>
+        <div class="stat"><h3 data-count="4.8">★</h3><p>Rating</p></div>
+        <div class="stat"><h3 data-count="10"><span class="suffix">+</span></h3><p>Years</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--charcoal);color:var(--white);padding:80px 0;text-align:center;">
+    <div class="container reveal">
+      <h2 class="section-title" style="color:var(--white);">Your event could be next.</h2>
+      <p style="color:rgba(255,255,255,0.5);margin:16px 0 32px;max-width:480px;margin-left:auto;margin-right:auto;">Let's create something worth remembering.</p>
+      <a href="contact.html" class="btn btn-light">Start Planning</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo No-Bg.png" alt="Thamizh Nikazhvigal">
+          <p><strong>Thamizh Nikazhvigal</strong> — Event architects in Tamil Nadu. We design celebrations that stay with people.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Pages</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html">Weddings</a></li>
+            <li><a href="services.html">Corporate</a></li>
+            <li><a href="services.html">Celebrations</a></li>
+            <li><a href="services.html">Design & Decor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+919XXXXXXXXX">+91 9X XXXX XXXX</a></li>
+            <li><a href="https://wa.me/919XXXXXXXXX">WhatsApp</a></li>
+            <li><a href="mailto:hello@thamizhnikazhvigal.com">Email</a></li>
+            <li>Chennai · Coimbatore · Madurai · Trichy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Thamizh Nikazhvigal</span>
+        <span>Chennai · Coimbatore · Madurai · Trichy</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="sticky-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <div class="mobile-bar">
+    <a href="tel:+919XXXXXXXXX" class="call"><i class="fas fa-phone"></i> Call</a>
+    <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="contact.html" class="quote"><i class="fas fa-pen"></i> Inquiry</a>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
