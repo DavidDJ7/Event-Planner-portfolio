@@ -584,6 +584,7 @@ ul { list-style: none; }
   .hamburger { display: flex; }
   .mobile-bar { display: flex; }
   .sticky-wa { bottom: 76px; width: 46px; height: 46px; font-size: 20px; }
+  .back-to-top { bottom: 150px; }
 }
 
 /* =========================================
