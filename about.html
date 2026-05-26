@@ -46,7 +46,11 @@
       border: 2px solid var(--cream);
     }
     .timeline-compact li strong { display: block; font-family: var(--font-display); font-size: 18px; color: var(--charcoal); }
+    .timeline-compact.dark li strong { color: var(--gold); }
     .timeline-compact li p { font-size: 14px; color: var(--gray-400); margin-top: 2px; }
+    .timeline-compact.dark li p { color: rgba(255,255,255,0.5); }
+    .timeline-compact.dark::before { background: rgba(255,255,255,0.1); }
+    .timeline-compact.dark li::before { background: var(--gold); border-color: var(--charcoal); }
 
     .team-grid {
       display: grid;
@@ -167,7 +171,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" style="background:var(--gold-light);">
     <div class="container">
       <div class="about-grid">
         <div class="img-wrap reveal">
@@ -176,10 +180,10 @@
         <div class="reveal reveal-delay-1">
           <div class="label">The beginning</div>
           <h2 class="section-title">One wedding. ₹50,000. Five friends.</h2>
-          <p style="color:var(--gray-400);font-size:16px;line-height:1.9;margin:16px 0;">
+          <p style="color:var(--gray-500);font-size:16px;line-height:1.9;margin:16px 0;">
             In 2013, our founder watched the mother of the bride running around at 4 AM — checking food, managing vendors, directing photographers. By the time the ceremony started, she was exhausted. She missed her daughter's wedding.
           </p>
-          <p style="color:var(--gray-400);font-size:16px;line-height:1.9;">
+          <p style="color:var(--gray-500);font-size:16px;line-height:1.9;">
             That shouldn't happen. So we built a company to make sure it never does. Today, we're 60+ people across four cities, and every client gets one dedicated team member who handles everything — so they can just be present.
           </p>
         </div>
@@ -195,20 +199,20 @@
     </div>
   </div>
 
-  <section class="section" style="padding-top:0;">
+  <section class="section" style="padding-top:0;background:var(--charcoal);">
     <div class="container">
       <div class="reveal">
-        <div class="label">How we grew</div>
-        <h2 class="section-title">Our timeline</h2>
+        <div class="label" style="color:var(--gold);">How we grew</div>
+        <h2 class="section-title" style="color:var(--white);">Our timeline</h2>
       </div>
       <div class="grid-2" style="margin-top:40px;">
-        <ul class="timeline-compact reveal">
+        <ul class="timeline-compact dark reveal">
           <li><strong>2013</strong><p>The spark: a family wedding where the mother missed everything. The founder decided to change how events work.</p></li>
           <li><strong>2014</strong><p>Launched with ₹50,000. First office: a 10×10 room in Trichy. Team: five college friends.</p></li>
           <li><strong>2017</strong><p>Incorporated. Chennai office opened. First ₹1Cr revenue year. Team of 15.</p></li>
           <li><strong>2020</strong><p>COVID hit. 25 weddings canceled. Survived on micro-weddings. Built our online presence.</p></li>
         </ul>
-        <ul class="timeline-compact reveal reveal-delay-1">
+        <ul class="timeline-compact dark reveal reveal-delay-1">
           <li><strong>2022</strong><p>Post-COVID boom — 200+ events. Madurai office. In-house photo/video team launched.</p></li>
           <li><strong>2023</strong><p>Won "Best Wedding Planner — Tamil Nadu." NRI wedding division launched.</p></li>
           <li><strong>2025</strong><p>600+ events. 60 team members. Revenue crosses ₹5Cr. Franchise model in planning.</p></li>
@@ -218,33 +222,42 @@
     </div>
   </section>
 
-  <section class="section" style="background:var(--warm-beige);background-image:url('Assets/Warm ambient event photo.webp');background-size:cover;background-blend-mode:overlay;background-position:center;">
+  <section class="section" style="background:var(--crimson);">
     <div class="container">
       <div class="text-center reveal">
-        <div class="label">Our values</div>
-        <h2 class="section-title">What we stand for</h2>
+        <div class="label" style="color:var(--gold);">Our values</div>
+        <h2 class="section-title" style="color:var(--white);">What we stand for</h2>
       </div>
       <ul class="values-list" style="margin-top:40px;">
-        <li class="reveal"><i class="fas fa-leaf"></i> Authenticity — Real flowers, real emotions, transparent pricing</li>
-        <li class="reveal reveal-delay-1"><i class="fas fa-gem"></i> Excellence — Every detail matters. Good is never enough.</li>
-        <li class="reveal reveal-delay-1"><i class="fas fa-heart"></i> Empathy — Your stress becomes our stress. We carry it.</li>
-        <li class="reveal reveal-delay-2"><i class="fas fa-shield"></i> Reliability — We do what we say. No excuses. Ever.</li>
-        <li class="reveal reveal-delay-2"><i class="fas fa-om"></i> Tradition — We honor Tamil culture in every celebration.</li>
-        <li class="reveal reveal-delay-3"><i class="fas fa-lightbulb"></i> Innovation — Tradition meets modern design and technology.</li>
+        <li class="reveal" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);"><i class="fas fa-leaf" style="color:var(--gold);"></i> Authenticity — Real flowers, real emotions, transparent pricing</li>
+        <li class="reveal reveal-delay-1" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);"><i class="fas fa-gem" style="color:var(--gold);"></i> Excellence — Every detail matters. Good is never enough.</li>
+        <li class="reveal reveal-delay-1" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);"><i class="fas fa-heart" style="color:var(--gold);"></i> Empathy — Your stress becomes our stress. We carry it.</li>
+        <li class="reveal reveal-delay-2" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);"><i class="fas fa-shield" style="color:var(--gold);"></i> Reliability — We do what we say. No excuses. Ever.</li>
+        <li class="reveal reveal-delay-2" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);"><i class="fas fa-om" style="color:var(--gold);"></i> Tradition — We honor Tamil culture in every celebration.</li>
+        <li class="reveal reveal-delay-3" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);"><i class="fas fa-lightbulb" style="color:var(--gold);"></i> Innovation — Tradition meets modern design and technology.</li>
       </ul>
     </div>
   </section>
 
   <section class="section" style="padding-bottom:0;">
     <div class="container">
-      <div class="trust-badge reveal">
+      <div class="trust-badge reveal" style="background:var(--gold-light);border-color:var(--gold);">
         <img src="Assets/Best Wedding Planner award badge.webp" alt="Award badge">
-        <div><h4>Award-winning team</h4><p>Best Wedding Planner — Tamil Nadu · South India Wedding Awards 2023 · ISO 9001:2015</p></div>
+        <div><h4>Award-winning team</h4><p style="color:var(--gray-500);">Best Wedding Planner — Tamil Nadu · South India Wedding Awards 2023 · ISO 9001:2015</p></div>
       </div>
     </div>
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="grid-2" style="align-items:start;">
+        <div class="img-wrap reveal" style="height:400px;"><img src="Assets/Family at wedding.webp" alt="Family at wedding" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="img-wrap reveal reveal-delay-1" style="height:400px;"><img src="Assets/Bride with parents.webp" alt="Bride with parents" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;background:var(--charcoal);">
     <div class="container">
       <div class="grid-2" style="align-items:start;">
         <div class="img-wrap reveal" style="height:400px;"><img src="Assets/Family at wedding.webp" alt="Family at wedding" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
@@ -260,11 +273,47 @@
         <h2 class="section-title">Trusted by families across Tamil Nadu</h2>
       </div>
       <div class="testimonial-row" style="margin-top:32px;">
-        <div class="card reveal">
+        <div class="card reveal" style="background:var(--gold-light);border-color:var(--gold);">
           <div class="card-body"><img src="Assets/Corporate client.webp" alt="Client"><div><h4>Vikram Rajan</h4><p>"Flawless execution for our 1,200-guest corporate gala. Every detail was perfect."</p></div></div>
         </div>
-        <div class="card reveal reveal-delay-1">
+        <div class="card reveal reveal-delay-1" style="background:var(--gold-light);border-color:var(--gold);">
           <div class="card-body"><img src="Assets/Happy couple.webp" alt="Client"><div><h4>Priya & Arjun</h4><p>"As NRIs, they guided us through every tradition. Absolutely phenomenal service."</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;background:var(--crimson);">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label" style="color:var(--gold);">Leadership</div>
+        <h2 class="section-title" style="color:var(--white);">The people behind the work</h2>
+      </div>
+      <div class="team-grid" style="margin-top:40px;">
+        <div class="team-card reveal">
+          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184297/pexels-photo-3184297.jpeg" alt="Founder" loading="lazy"></div>
+          <h4 style="color:var(--white);">Karthikeyan S.</h4>
+          <p style="color:rgba(255,255,255,0.5);">Founder & CEO · 10+ yrs</p>
+        </div>
+        <div class="team-card reveal reveal-delay-1">
+          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg" alt="Operations" loading="lazy"></div>
+          <h4 style="color:var(--white);">Meenakshi R.</h4>
+          <p style="color:rgba(255,255,255,0.5);">Head of Operations · 8+ yrs</p>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184299/pexels-photo-3184299.jpeg" alt="Creative" loading="lazy"></div>
+          <h4 style="color:var(--white);">Bharath K.</h4>
+          <p style="color:rgba(255,255,255,0.5);">Creative Director · 7+ yrs</p>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg" alt="Client relations" loading="lazy"></div>
+          <h4 style="color:var(--white);">Divya P.</h4>
+          <p style="color:rgba(255,255,255,0.5);">Senior Event Parent · 6+ yrs</p>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="img-wrap"><img src="https://images.pexels.com/photos/3184301/pexels-photo-3184301.jpeg" alt="Vendors" loading="lazy"></div>
+          <h4 style="color:var(--white);">Venkatesh M.</h4>
+          <p style="color:rgba(255,255,255,0.5);">Vendor Relations · 9+ yrs</p>
         </div>
       </div>
     </div>
