@@ -44,9 +44,22 @@
       max-width: 900px;
     }
     .home-hero h1 em { font-style: italic; color: var(--dusty-rose); }
+    .hero-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      width: 100%;
+    }
+    .hero-logo-wrap .text-side { flex: 1; }
+    .hero-logo-wrap .logo-side {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .hero-logo {
-      margin-bottom: 24px;
-      max-width: 360px;
+      max-width: 400px;
       width: 100%;
       height: auto;
       display: block;
@@ -195,8 +208,9 @@
     .home-cta p { color: rgba(255,255,255,0.5); max-width: 480px; margin: 16px auto 32px; }
 
     @media (max-width: 768px) {
-      .home-hero { height: 92vh; min-height: 600px; }
-      .hero-logo { max-width: 200px; margin-bottom: 16px; }
+      .home-hero { height: auto; min-height: 100vh; padding: 120px 0 80px; }
+      .hero-logo-wrap { flex-direction: column; gap: 40px; text-align: center; }
+      .hero-logo { max-width: 200px; }
       .home-hero h1 { font-size: 32px; letter-spacing: -0.5px; max-width: 100%; }
       .home-hero p { font-size: 15px; max-width: 100%; margin-top: 16px; }
       .home-hero-actions { flex-direction: column; gap: 12px; margin-top: 28px; }
@@ -234,7 +248,7 @@
       .home-cta .btn { width: 100%; justify-content: center; }
     }
     @media (max-width: 480px) {
-      .hero-logo { max-width: 160px; }
+      .hero-logo { max-width: 140px; }
       .featured-grid .col { flex-direction: column; }
       .featured-grid .col .img-wrap { height: 160px; }
       .stat-row { grid-template-columns: repeat(2, 1fr); }
@@ -279,12 +293,18 @@
     </video>
     <div class="home-hero-overlay"></div>
     <div class="container">
-      <img src="Logo No-Bg.png" alt="Thamizh Nikazhvigal" class="hero-logo reveal" loading="eager" fetchpriority="high">
-      <h1 class="reveal reveal-delay-1">We design events that <em>stay</em> with people.</h1>
-      <p class="reveal reveal-delay-2">Tamil Nadu's event architects. 850+ celebrations, one philosophy — you enjoy, we craft every detail.</p>
-      <div class="home-hero-actions reveal reveal-delay-3">
-        <a href="gallery.html" class="btn btn-light">View Our Work</a>
-        <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:var(--white);">Start Planning</a>
+      <div class="hero-logo-wrap">
+        <div class="text-side">
+          <h1 class="reveal">We design events that <em>stay</em> with people.</h1>
+          <p class="reveal reveal-delay-1">Tamil Nadu's event architects. 850+ celebrations, one philosophy — you enjoy, we craft every detail.</p>
+          <div class="home-hero-actions reveal reveal-delay-2">
+            <a href="gallery.html" class="btn btn-light">View Our Work</a>
+            <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:var(--white);">Start Planning</a>
+          </div>
+        </div>
+        <div class="logo-side reveal reveal-delay-1">
+          <img src="Logo No-Bg.png" alt="Thamizh Nikazhvigal" class="hero-logo" loading="eager" fetchpriority="high">
+        </div>
       </div>
     </div>
     <div class="hero-scroll"><span>Scroll</span><div class="line"></div></div>
