@@ -165,8 +165,18 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
 }
-.header-logo { display: flex; align-items: center; }
+.header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .header-logo img { height: 36px; width: auto; }
+.header-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.header-logo-text .name { font-family: var(--font-display); font-size: 16px; color: var(--charcoal); letter-spacing: 0.3px; font-weight: 400; }
+.header-logo-text .tagline { font-size: 9px; color: var(--gray-300); text-transform: uppercase; letter-spacing: 1.5px; }
+.header.dark .header-logo-text .name { color: var(--white); }
+.header.dark .header-logo-text .tagline { color: var(--gray-400); }
+@media (max-width: 480px) {
+  .header-logo img { height: 28px; }
+  .header-logo-text .name { font-size: 13px; }
+  .header-logo-text .tagline { font-size: 7px; letter-spacing: 1px; }
+}
 .header-nav { display: flex; align-items: center; gap: 36px; }
 .header-nav a {
   font-size: 13px;
