@@ -15,6 +15,13 @@
     .gallery-hero {
       background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
     }
+    @media (max-width: 768px) {
+      .gallery-masonry { columns: 2; column-gap: 8px; }
+      .gallery-masonry .item { margin-bottom: 8px; }
+    }
+    @media (max-width: 480px) {
+      .gallery-masonry { columns: 1; }
+    }
     .gallery-masonry {
       columns: 3;
       column-gap: 16px;

@@ -15,6 +15,20 @@
     .services-hero {
       background: linear-gradient(135deg, #1a1a1a 0%, var(--charcoal) 100%);
     }
+    @media (max-width: 768px) {
+      .services-hero h1 { font-size: 32px; }
+      .services-hero p { font-size: 15px; }
+      .service-card-lg { grid-template-columns: 1fr; }
+      .service-card-lg .img-wrap { height: 200px; }
+      .service-card-lg .content { padding: 24px; }
+      .service-card-lg .content ul { columns: 1; }
+      .service-card-lg .content h3 { font-size: 20px; }
+      .grid-3 { grid-template-columns: 1fr; gap: 16px; }
+      .grid-3 .img-wrap { height: 140px !important; }
+      .all-services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px; }
+      .all-services-grid span { padding: 10px 8px; font-size: 12px; }
+      .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
     .service-card-lg {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;

@@ -123,13 +123,54 @@
     .testimonial-card-home .attribution { font-size: 14px; color: var(--gray-400); }
     .testimonial-card-home .attribution strong { color: var(--charcoal); }
 
-    .blog-grid-home {
+    .blog-grid-home { display: flex; flex-direction: column; gap: 32px; max-width: 860px; margin: 32px auto 0; }
+    .blog-post {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      align-items: start;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
     }
-    .blog-grid-home .card .img-wrap { height: 200px; }
-    .blog-grid-home .card .img-wrap img { width:100%; height:100%; object-fit:cover; }
+    .blog-post:hover { border-color: var(--dusty-rose); }
+    .blog-post .thumb { height: 180px; overflow: hidden; }
+    .blog-post .thumb img { width:100%; height:100%; object-fit:cover; transition: transform 1s ease; }
+    .blog-post:hover .thumb img { transform: scale(1.04); }
+    .blog-post .content { padding: 28px 28px 28px 0; }
+    .blog-post .content .meta {
+      font-size: 12px;
+      color: var(--gray-300);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .blog-post .content h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .blog-post .content p {
+      font-size: 14px;
+      color: var(--gray-400);
+      line-height: 1.7;
+    }
+    .blog-post .content .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dusty-rose);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+    }
+    .blog-post .content .read-more:hover { gap: 14px; }
 
     .home-cta {
       background: var(--charcoal);
@@ -146,14 +187,48 @@
     .home-cta p { color: rgba(255,255,255,0.5); max-width: 480px; margin: 16px auto 32px; }
 
     @media (max-width: 768px) {
-      .intro-grid { grid-template-columns: 1fr; gap: 40px; }
-      .intro-grid .img-wrap { height: 300px; }
-      .featured-grid { grid-template-columns: 1fr; }
-      .featured-grid .img-wrap { height: 280px; }
-      .featured-grid .col .img-wrap { height: 200px; }
-      .testimonial-card-home { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
-      .testimonial-card-home .img-wrap { height: 240px; }
-      .blog-grid-home { grid-template-columns: 1fr; }
+      .home-hero { height: 92vh; min-height: 600px; }
+      .home-hero h1 { font-size: 32px; letter-spacing: -0.5px; max-width: 100%; }
+      .home-hero p { font-size: 15px; max-width: 100%; margin-top: 16px; }
+      .home-hero-actions { flex-direction: column; gap: 12px; margin-top: 28px; }
+      .home-hero-actions .btn { width: 100%; justify-content: center; }
+      .hero-scroll { display: none; }
+
+      .intro-grid { grid-template-columns: 1fr; gap: 28px; }
+      .intro-grid .img-wrap { height: 200px; }
+      .intro-grid > :first-child { order: 2; }
+      .intro-grid > :last-child { order: 1; }
+
+      .featured-grid { grid-template-columns: 1fr; gap: 12px; }
+      .featured-grid .img-wrap { height: 200px; }
+      .featured-grid .col { flex-direction: row; gap: 12px; }
+      .featured-grid .col .img-wrap { height: 140px; flex: 1; }
+
+      .testimonial-card-home { grid-template-columns: 1fr; padding: 24px; gap: 20px; }
+      .testimonial-card-home .img-wrap { height: 180px; width: 120px; border-radius: 50%; margin: 0 auto; }
+      .testimonial-card-home blockquote { font-size: 18px; }
+      .testimonial-card-home .quote-mark { font-size: 40px; }
+
+      .blog-post { grid-template-columns: 1fr; gap: 0; }
+      .blog-post .thumb { height: 160px; }
+      .blog-post .content { padding: 20px; }
+      .blog-post .content h3 { font-size: 17px; }
+      .blog-post .content p { font-size: 13px; }
+
+      .stat-row { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .stat h3 { font-size: 28px; }
+      .stat p { font-size: 11px; }
+
+      .section { padding: 48px 0; }
+      .home-cta { padding: 60px 0; }
+      .home-cta h2 { font-size: 26px; }
+      .home-cta .btn { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .featured-grid .col { flex-direction: column; }
+      .featured-grid .col .img-wrap { height: 160px; }
+      .stat-row { grid-template-columns: repeat(2, 1fr); }
+      .testimonial-card-home .img-wrap { width: 80px; height: 80px; }
     }
   </style>
 </head>
@@ -272,19 +347,34 @@
         <div class="label">From our blog</div>
         <h2 class="section-title">Planning guides & inspiration</h2>
       </div>
-      <div class="blog-grid-home" style="margin-top:32px;">
-        <div class="card reveal">
-          <div class="img-wrap"><img src="Assets/Wedding planning guide.webp" alt="Wedding planning" loading="lazy"></div>
-          <div class="card-body"><h3>How to plan a Tamil wedding in 6 months</h3><p>Your month-by-month checklist — from Muhurtham to the big day.</p></div>
-        </div>
-        <div class="card reveal reveal-delay-1">
-          <div class="img-wrap"><img src="Assets/Tamil tradition guide.jpg" alt="Tamil traditions" loading="lazy"></div>
-          <div class="card-body"><h3>Understanding Tamil wedding traditions</h3><p>Iyer vs Iyengar — a guide to ceremonies and customs.</p></div>
-        </div>
-        <div class="card reveal reveal-delay-2">
-          <div class="img-wrap"><img src="Assets/Venue selection guide.jpg" alt="Venue guide" loading="lazy"></div>
-          <div class="card-body"><h3>Top 20 venues across Tamil Nadu</h3><p>From intimate mandapams to 5-star hotels — curated for you.</p></div>
-        </div>
+      <div class="blog-grid-home">
+        <article class="blog-post reveal">
+          <div class="thumb"><img src="Assets/Wedding planning guide.webp" alt="Wedding planning" loading="lazy"></div>
+          <div class="content">
+            <div class="meta">May 20, 2026 · 8 min read</div>
+            <h3>How to plan a traditional Tamil wedding in 6 months</h3>
+            <p>Planning a Tamil wedding can feel overwhelming — there are rituals to coordinate, vendors to vet, and families to satisfy. This month-by-month guide breaks everything down. From securing the Muhurtham date and booking the venue in Month 1, to finalizing the menu tasting and bridal entry concept in Month 6, we cover every step. Whether you're planning an Iyer, Chettiar, or Gounder wedding, the timeline is your best friend. Pro tip: lock your photographer at least 4 months out — the best ones book up fast during peak season (Nov–Feb).</p>
+            <a href="#" class="read-more">Read article <i class="fas fa-arrow-right" style="font-size:10px;"></i></a>
+          </div>
+        </article>
+        <article class="blog-post reveal reveal-delay-1">
+          <div class="thumb"><img src="Assets/Tamil tradition guide.jpg" alt="Tamil traditions" loading="lazy"></div>
+          <div class="content">
+            <div class="meta">May 12, 2026 · 6 min read</div>
+            <h3>Iyer vs Iyengar weddings: understanding the differences</h3>
+            <p>Both Iyer and Iyengar weddings follow the Tamil Brahmin tradition, but the differences matter. Iyer weddings typically have the *Kashi Yatra* (where the groom pretends to leave for Kashi) and the bride's brother brings him back. Iyengar weddings include the *Saptapadi* (seven steps) around a sacred fire but omit the *Kashi Yatra*. The *Muhurtham* timing also differs — Iyers follow the *Rahu Kalam* avoidance while Iyengars follow *Vaishnava* traditions. Food too: Iyer weddings traditionally serve a fully vegetarian *sadya* on banana leaves, while some Iyengar communities include specific temple-style prasadams.</p>
+            <a href="#" class="read-more">Read article <i class="fas fa-arrow-right" style="font-size:10px;"></i></a>
+          </div>
+        </article>
+        <article class="blog-post reveal reveal-delay-2">
+          <div class="thumb"><img src="Assets/Venue selection guide.jpg" alt="Venue guide" loading="lazy"></div>
+          <div class="content">
+            <div class="meta">May 4, 2026 · 5 min read</div>
+            <h3>Top 20 wedding venues in Tamil Nadu for every budget</h3>
+            <p>From grand 5-star ballrooms to intimate temple *mandapams*, Tamil Nadu offers incredible venue diversity. Chennai's ITC Grand Chola and Leela Palace lead the luxury segment (₹15L+). For mid-range budgets, Coimbatore's Kodai Road resorts and Madurai's heritage palaces offer stunning backdrops at ₹5–10L. Budget-friendly options include Trichy's Sangam Halls and dedicated Kalyana Mandapams starting at ₹1L. Don't overlook temple premises for religious ceremonies — many allow event setups with prior permission. We've personally coordinated events at 100+ venues across TN and maintain a venue shortlist with real pricing — no markups.</p>
+            <a href="#" class="read-more">Read article <i class="fas fa-arrow-right" style="font-size:10px;"></i></a>
+          </div>
+        </article>
       </div>
     </div>
   </div>

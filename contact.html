@@ -13,7 +13,13 @@
   <link rel="icon" type="image/png" href="Logo No-Bg.png">
   <style>
     .contact-hero {
-      background: linear-gradient(135deg, var(--charcoal) 0%, #0d0d0d 100%);
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-info { text-align: center; }
+      .contact-form h3 { text-align: center; }
+      input, textarea { font-size: 16px; }
     }
     .contact-layout {
       display: grid;

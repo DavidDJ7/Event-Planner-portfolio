@@ -110,10 +110,19 @@
     .trust-badge p { font-size: 14px; color: var(--gray-400); }
 
     @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .about-grid .img-wrap { height: 320px; }
+      .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .about-grid .img-wrap { height: 200px; }
+      .about-grid > :first-child { order: 2; }
+      .about-grid > :last-child { order: 1; }
       .values-list { grid-template-columns: 1fr; }
-      .about-banner { height: 280px; }
+      .about-banner { height: 200px; margin: 40px 0; }
+      .about-banner .overlay h3 { font-size: 22px; }
+      .about-banner .overlay p { font-size: 14px; }
+      .timeline-compact { padding-left: 20px; }
+      .testimonial-row { grid-template-columns: 1fr; }
+      .trust-badge { flex-direction: column; text-align: center; padding: 24px; gap: 16px; }
+      .trust-badge img { height: 60px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
     }
   </style>
 </head>
