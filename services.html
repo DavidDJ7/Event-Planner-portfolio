@@ -19,67 +19,113 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://thamizhnikazhvigal.com/services.html">
   <style>
+    /* Hero */
     .services-hero {
       background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #C9A84C 100%);
     }
-    @media (max-width: 768px) {
-      .services-hero h1 { font-size: 32px; }
-      .services-hero p { font-size: 15px; }
-      .service-card-lg { grid-template-columns: 1fr !important; }
-      .service-card-lg .img-wrap { height: 200px; }
-      .service-card-lg .content { padding: 24px; }
-      .service-card-lg .content ul { columns: 1; }
-      .service-card-lg .content h3 { font-size: 20px; }
-      .service-card-lg:nth-child(even) .img-wrap { order: 0; }
-      .grid-3 { grid-template-columns: 1fr; gap: 16px; }
-      .grid-3 .img-wrap { height: 140px !important; }
-      .all-services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px; }
-      .all-services-grid span { padding: 10px 8px; font-size: 12px; }
-      .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
-    }
-    @media (max-width: 480px) {
-      .all-services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 6px; }
-      .all-services-grid span { padding: 8px 6px; font-size: 11px; }
-    }
+
+    /* Core service cards */
     .service-card-lg {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 0;
+      margin-bottom: 24px;
       background: var(--white);
       border: 1px solid var(--gray-200);
-      margin-bottom: 24px;
       transition: var(--transition);
     }
-    .service-card-lg:hover { border-color: var(--gold); box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
-    .service-card-lg .img-wrap { height: 360px; }
-    .service-card-lg .img-wrap img { width:100%; height:100%; object-fit:cover; }
-    .service-card-lg .content { padding: 48px; display: flex; flex-direction: column; justify-content: center; }
+    .service-card-lg:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    }
+    .service-card-lg .img-wrap { height: 360px; overflow: hidden; }
+    .service-card-lg .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s ease; }
+    .service-card-lg:hover .img-wrap img { transform: scale(1.04); }
+    .service-card-lg .content {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .service-card-lg .content h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .service-card-lg .content p {
+      font-size: 14px;
+      color: var(--gray-400);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .service-card-lg .content ul {
+      columns: 2;
+      gap: 16px;
+    }
+    .service-card-lg .content ul li {
+      font-size: 13px;
+      color: var(--gray-500);
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-card-lg .content ul li i { color: var(--gold); font-size: 11px; }
     .service-card-lg:nth-child(even) .img-wrap { order: 1; }
     .service-card-lg:nth-child(even) { grid-template-columns: 1.1fr 0.9fr; }
-    .service-card-lg .content h3 { font-family: var(--font-display); font-size: 24px; font-weight: 400; margin-bottom: 12px; }
-    .service-card-lg .content p { font-size: 14px; color: var(--gray-400); line-height: 1.8; margin-bottom: 16px; }
-    .service-card-lg .content ul { columns: 2; gap: 16px; }
-    .service-card-lg .content ul li { font-size: 13px; color: var(--gray-500); padding: 4px 0; display: flex; align-items: center; gap: 8px; }
-    .service-card-lg .content ul li i { color: var(--gold); font-size: 11px; }
 
+    /* All services grid */
     .all-services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 12px;
     }
     .all-services-grid span {
-      background: var(--cream);
-      border: 1px solid var(--gold);
       padding: 16px;
       text-align: center;
       font-size: 13px;
       font-weight: 500;
       color: var(--gray-500);
+      background: var(--cream);
+      border: 1px solid var(--gold);
       transition: var(--transition);
     }
-    .all-services-grid span:hover { border-color: var(--gold); color: var(--charcoal); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .all-services-grid span:hover {
+      color: var(--charcoal);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
 
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    /* Pricing grid */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1024px) {
+      .service-card-lg .content { padding: 32px; }
+      .service-card-lg .content ul { columns: 1; }
+    }
+    @media (max-width: 768px) {
+      .services-hero h1 { font-size: 32px; }
+      .services-hero p { font-size: 15px; }
+      .service-card-lg { grid-template-columns: 1fr; }
+      .service-card-lg:nth-child(even) { grid-template-columns: 1fr; }
+      .service-card-lg .img-wrap { height: 200px; }
+      .service-card-lg .content { padding: 24px; }
+      .service-card-lg .content h3 { font-size: 20px; }
+      .service-card-lg:nth-child(even) .img-wrap { order: 0; }
+      .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+      .all-services-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .all-services-grid span { padding: 10px 8px; font-size: 12px; }
+    }
+    @media (max-width: 480px) {
+      .all-services-grid { gap: 6px; }
+      .all-services-grid span { padding: 8px 6px; font-size: 11px; }
+      .service-card-lg .img-wrap { height: 160px; }
+    }
   </style>
 </head>
 <body>
@@ -90,7 +136,7 @@
       <nav class="header-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" class="nav-active">Services</a>
         <a href="gallery.html">Gallery</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
@@ -131,6 +177,7 @@
     </div>
   </section>
 
+  <!-- Engagement models -->
   <section class="section" style="background:var(--gold-light);">
     <div class="container">
       <div class="text-center reveal">
@@ -152,6 +199,7 @@
     </div>
   </section>
 
+  <!-- Core services -->
   <section class="section" style="background:var(--cream);">
     <div class="container">
       <div class="text-center reveal">
@@ -159,7 +207,6 @@
         <h2 class="section-title">What we deliver</h2>
       </div>
     </div>
-
     <div style="margin-top:40px;">
       <div class="container">
         <div class="service-card-lg reveal" style="background:var(--gold-light);border-color:var(--gold);">
@@ -177,7 +224,6 @@
             </ul>
           </div>
         </div>
-
         <div class="service-card-lg reveal" style="background:var(--gold-light);border-color:var(--gold);">
           <div class="content">
             <h3>Corporate & Business Events</h3>
@@ -193,7 +239,6 @@
           </div>
           <div class="img-wrap"><img src="Assets/corporate event setup.webp" alt="Corporate event" loading="lazy"></div>
         </div>
-
         <div class="service-card-lg reveal" style="background:var(--gold-light);border-color:var(--gold);">
           <div class="img-wrap"><img src="Assets/Traditional food on banana leaf.webp" alt="Traditional food" loading="lazy"></div>
           <div class="content">
@@ -209,7 +254,6 @@
             </ul>
           </div>
         </div>
-
         <div class="service-card-lg reveal" style="background:var(--gold-light);border-color:var(--gold);">
           <div class="content">
             <h3>Entertainment & Artists</h3>
@@ -229,6 +273,7 @@
     </div>
   </section>
 
+  <!-- Additional services -->
   <section class="section" style="background:var(--charcoal);">
     <div class="container">
       <div class="text-center reveal">
@@ -252,6 +297,7 @@
     </div>
   </section>
 
+  <!-- 28 event categories -->
   <section class="section" style="background:var(--gold-light);">
     <div class="container">
       <div class="text-center reveal">
@@ -259,7 +305,7 @@
         <h2 class="section-title">We plan them all.</h2>
       </div>
       <div class="all-services-grid" style="margin-top:32px;">
-        <span class="reveal" style="background:var(--cream);border-color:var(--gold);">Weddings</span>
+        <span class="reveal">Weddings</span>
         <span class="reveal reveal-delay-1">Engagements</span>
         <span class="reveal reveal-delay-1">Receptions</span>
         <span class="reveal reveal-delay-2">Baby Showers</span>
@@ -291,6 +337,7 @@
     </div>
   </section>
 
+  <!-- Pricing -->
   <section class="section" style="background:var(--charcoal);">
     <div class="container">
       <div class="text-center reveal">
@@ -327,6 +374,7 @@
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="section-premium-gold" style="padding:80px 0;text-align:center;">
     <div class="container reveal">
       <h2 class="section-title" style="color:var(--white);">Not sure what you need?</h2>
@@ -396,4 +444,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
