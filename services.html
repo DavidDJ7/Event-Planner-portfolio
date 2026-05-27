@@ -26,16 +26,20 @@
       .services-hero h1 { font-size: 32px; }
       .services-hero p { font-size: 15px; }
       .service-card-lg { grid-template-columns: 1fr !important; }
-      .service-card-lg .img-wrap { height: 240px; }
-      .service-card-lg .content { padding: 28px; }
+      .service-card-lg .img-wrap { height: 200px; }
+      .service-card-lg .content { padding: 24px; }
       .service-card-lg .content ul { columns: 1; }
       .service-card-lg .content h3 { font-size: 20px; }
       .service-card-lg:nth-child(even) .img-wrap { order: 0; }
       .grid-3 { grid-template-columns: 1fr; gap: 16px; }
       .grid-3 .img-wrap { height: 140px !important; }
-      .all-services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px; }
+      .all-services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px; }
       .all-services-grid span { padding: 10px 8px; font-size: 12px; }
       .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .all-services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 6px; }
+      .all-services-grid span { padding: 8px 6px; font-size: 11px; }
     }
     .service-card-lg {
       display: grid;
@@ -148,7 +152,7 @@
     </div>
   </section>
 
-  <section style="background:var(--cream);">
+  <section class="section" style="background:var(--cream);">
     <div class="container">
       <div class="text-center reveal">
         <div class="label">Core services</div>
