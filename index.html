@@ -110,7 +110,8 @@
       gap: 80px;
       align-items: center;
     }
-    .intro-grid .img-wrap { height: 600px; }
+      .intro-grid .img-wrap { height: 600px; }
+    @media (max-width: 1024px) { .intro-grid { gap: 48px; } }
     .intro-grid .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
     .featured-grid {
@@ -192,6 +193,7 @@
       align-items: center;
       gap: 8px;
       margin-top: 12px;
+      padding: 12px 0;
       font-size: 13px;
       font-weight: 600;
       color: var(--gold);
@@ -226,6 +228,7 @@
       .hero-scroll { display: none; }
 
       .intro-grid { grid-template-columns: 1fr; gap: 28px; }
+      .intro-grid .img-wrap { height: 200px; }
       .intro-grid .img-wrap { height: 200px; }
       .intro-grid > :first-child { order: 2; }
       .intro-grid > :last-child { order: 1; }

@@ -22,13 +22,6 @@
     .gallery-hero {
       background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #9B1B30 80%, #0d0d0d 100%);
     }
-    @media (max-width: 768px) {
-      .gallery-masonry { columns: 2; column-gap: 8px; }
-      .gallery-masonry .item { margin-bottom: 8px; }
-    }
-    @media (max-width: 480px) {
-      .gallery-masonry { columns: 1; }
-    }
     .gallery-masonry {
       columns: 3;
       column-gap: 16px;
@@ -79,8 +72,9 @@
       display: block;
     }
 
-    @media (max-width: 1024px) { .gallery-masonry { columns: 2; } }
+    @media (max-width: 1024px) { .gallery-masonry { columns: 2; column-gap: 8px; } }
     @media (max-width: 600px) { .gallery-masonry { columns: 1; } }
+    @media (max-width: 768px) { .gallery-filter { padding: 14px 20px; margin: 0 4px 8px; } }
   </style>
 </head>
 <body>

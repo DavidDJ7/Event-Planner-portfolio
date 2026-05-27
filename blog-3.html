@@ -43,13 +43,13 @@
     .author-bio p { font-size: 13px; color: var(--gray-400); margin: 4px 0 0; }
     .share-bar { display: flex; gap: 12px; align-items: center; padding: 24px 0; border-top: 1px solid var(--gray-200); margin-top: 32px; }
     .share-bar span { font-size: 13px; color: var(--gray-300); text-transform: uppercase; letter-spacing: 1px; }
-    .share-bar a { width: 36px; height: 36px; border-radius: 50%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; color: var(--gray-400); font-size: 14px; transition: var(--transition); }
+    .share-bar a { width: 44px; height: 44px; border-radius: 50%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; color: var(--gray-400); font-size: 14px; transition: var(--transition); }
     .share-bar a:hover { background: var(--crimson); color: var(--white); }
     .related-posts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
     .related-posts .card .card-body { padding: 20px; }
     .related-posts .card .card-body h3 { font-size: 17px; }
     .related-posts .card .card-body p { font-size: 13px; }
-    @media (max-width: 768px) { .article-body { padding: 40px 0; } .article-body h2 { font-size: 22px; } .related-posts { grid-template-columns: 1fr; } .author-bio { flex-direction: column; text-align: center; } .venue-table { font-size: 12px; } .venue-table th, .venue-table td { padding: 10px 8px; } }
+    @media (max-width: 768px) { .article-body { padding: 40px 0; } .article-body h2 { font-size: 22px; } .related-posts { grid-template-columns: 1fr; } .author-bio { flex-direction: column; text-align: center; } .venue-table { font-size: 12px; } .venue-table th, .venue-table td { padding: 10px 8px; } .venue-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; } }
   </style>
 </head>
 <body>
@@ -106,7 +106,7 @@
     <p><em>Note: All prices below are venue rental only (food, decor, and photography extra). Prices vary by season — peak season (Nov-Feb) commands a 20-30% premium.</em></p>
 
     <h2>Luxury (₹15L+)</h2>
-    <table class="venue-table">
+    <div class="venue-table-wrap"><table class="venue-table">
       <thead>
         <tr><th>Venue</th><th>City</th><th>Capacity</th><th>Price Range</th></tr>
       </thead>
@@ -117,10 +117,10 @@
         <tr><td>Kodai Roads Heritage Resort</td><td>Coimbatore</td><td>800+</td><td class="budget">₹15-22L</td></tr>
         <tr><td>JC Residency (Grand Ballroom)</td><td>Madurai</td><td>1200+</td><td class="budget">₹15-20L</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h2>Mid-Range (₹5L - ₹12L)</h2>
-    <table class="venue-table">
+    <div class="venue-table-wrap"><table class="venue-table">
       <thead>
         <tr><th>Venue</th><th>City</th><th>Capacity</th><th>Price Range</th></tr>
       </thead>
@@ -133,12 +133,12 @@
         <tr><td>Kalingarayar Mahal</td><td>Erode</td><td>1000+</td><td class="budget">₹5-7L</td></tr>
         <tr><td>Tamil Nadu Wedding Hall</td><td>Chennai</td><td>600+</td><td class="budget">₹5-7L</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <img src="Assets/Venue selection guide.webp" alt="Wedding venue setup" loading="lazy">
 
     <h2>Budget-Friendly (₹1L - ₹4L)</h2>
-    <table class="venue-table">
+    <div class="venue-table-wrap"><table class="venue-table">
       <thead>
         <tr><th>Venue</th><th>City</th><th>Capacity</th><th>Price Range</th></tr>
       </thead>
@@ -152,7 +152,7 @@
         <tr><td>Aruppukottai Mahal</td><td>Virudhunagar</td><td>500+</td><td class="budget">₹1-3L</td></tr>
         <tr><td>Thirumalai Naicker Mahal</td><td>Madurai</td><td>400+</td><td class="budget">₹2-4L</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <div class="highlight-box">
       <strong>Insider tip:</strong> Temple premises are highly underrated for the ceremony portion. The ambiance is unmatched, the acoustics are perfect for vedic chants, and many temples now allow professional photography with permission. You save on decor too — temple architecture is the decor. Just book well in advance and secure written permission.

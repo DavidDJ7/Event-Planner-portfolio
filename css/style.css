@@ -47,6 +47,8 @@ body {
   background: var(--cream);
   line-height: 1.7;
   overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -473,7 +475,7 @@ ul { list-style: none; }
 .footer-brand p { font-size: 14px; line-height: 1.8; max-width: 320px; }
 .footer-social { display: flex; gap: 12px; margin-top: 20px; }
 .footer-social a {
-  width: 36px; height: 36px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   background: rgba(255,255,255,0.05);
   display: flex;
@@ -550,9 +552,9 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 8px;
+  padding: 16px 8px;
   border-radius: 6px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--white);
   text-transform: uppercase;
