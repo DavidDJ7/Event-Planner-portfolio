@@ -40,7 +40,7 @@
 
 /* Reset */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 body {
   font-family: var(--font-body);
   color: var(--gray-500);
@@ -358,7 +358,7 @@ ul { list-style: none; }
 }
 
 /* Sections */
-.section { padding: 100px 0; }
+.section { padding: 100px 0; overflow: hidden; }
 @media (max-width: 768px) { .section { padding: 60px 0; } }
 
 /* Animations */
